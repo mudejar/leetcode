@@ -6,12 +6,12 @@ import (
 
 func main() {
 	log.WithFields(log.Fields{
-		"() true": isValid("()"),
+		"() true":     isValid("()"),
 		"()[]{} true": isValid("()[]{}"),
-		"(] false": isValid("(]"),
-		"([)] false": isValid("([)]"),
-		"{[]} true": isValid("{[]}"),
-		"[": isValid("["),
+		"(] false":    isValid("(]"),
+		"([)] false":  isValid("([)]"),
+		"{[]} true":   isValid("{[]}"),
+		"[":           isValid("["),
 	}).Println()
 }
 
@@ -56,7 +56,7 @@ func isValid(s string) bool {
 	return true
 }
 
-func pop(s *string) string{
+func pop(s *string) string {
 	element := string((*s)[len(*s)-1])
 	(*s) = (*s)[:len(*s)-1]
 	return element

@@ -7,8 +7,8 @@ import (
 
 func main() {
 	log.WithFields(log.Fields{
-		`["flower","flow","flight"]`: longestCommonPrefix([]string{"flower","flow","flight"}),
-		`["dog","racecar","car"]`: longestCommonPrefix([]string{"dog","racecar","car"}),
+		`["flower","flow","flight"]`: longestCommonPrefix([]string{"flower", "flow", "flight"}),
+		`["dog","racecar","car"]`:    longestCommonPrefix([]string{"dog", "racecar", "car"}),
 	}).Println()
 }
 

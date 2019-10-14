@@ -12,7 +12,7 @@ func main() {
 }
 
 func findLength(x int) int {
-	return int(math.Log10(float64(x))+1)
+	return int(math.Log10(float64(x)) + 1)
 }
 
 func isPalindrome(x int) bool {
