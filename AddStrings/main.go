@@ -11,12 +11,12 @@ func addStrings(num1 string, num2 string) string {
 	num2Length := len(num2)
 	zeros := ""
 	if num1Length > num2Length {
-		for i := 0; i < num1Length - num2Length; i++ {
+		for i := 0; i < num1Length-num2Length; i++ {
 			zeros += "0"
 		}
 		num2 = zeros + num2
 	} else {
-		for i := 0; i < num2Length - num1Length; i++ {
+		for i := 0; i < num2Length-num1Length; i++ {
 			zeros += "0"
 		}
 		num1 = zeros + num1
@@ -25,7 +25,7 @@ func addStrings(num1 string, num2 string) string {
 	str := ""
 	carry := 0
 	sum := 0
-	for i := len(num1)-1; i >= 0; i-- {
+	for i := len(num1) - 1; i >= 0; i-- {
 		one, _ := strconv.Atoi(string(num1[i]))
 		two, _ := strconv.Atoi(string(num2[i]))
 		sum = one + two + carry

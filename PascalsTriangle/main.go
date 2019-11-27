@@ -22,7 +22,7 @@ func generate(rowIndex int) [][]int {
 }
 
 func helper(triangle [][]int, row int) {
-	prevRowIndex := row-1
+	prevRowIndex := row - 1
 	triangle[row][0], triangle[row][row] = 1, 1
 	for i := 1; i < len(triangle[row])-1; i++ {
 		triangle[row][i] = triangle[prevRowIndex][i-1] + triangle[prevRowIndex][i]

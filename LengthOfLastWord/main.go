@@ -6,9 +6,9 @@ import (
 
 func main() {
 	log.WithFields(log.Fields{
-		"Hello World": lengthOfLastWord("Hello World"),
+		"Hello World":  lengthOfLastWord("Hello World"),
 		"Hello World ": lengthOfLastWord("Hello World "),
-		"a": lengthOfLastWord("a"),
+		"a":            lengthOfLastWord("a"),
 	}).Println()
 }
 

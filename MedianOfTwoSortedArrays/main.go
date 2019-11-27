@@ -1,19 +1,19 @@
 package main
 
-import(
+import (
 	log "github.com/sirupsen/logrus"
 )
 
 func main() {
 	log.WithFields(log.Fields{
-		"nums1 = [1, 3] nums2 = [2], should result in 2.0": findMedianSortedArrays([]int{1,3}, []int{2}),
-		"nums1 = [1, 2] nums2 = [3, 4] should result in 2.5": findMedianSortedArrays([]int{1,2}, []int{3,4}),
+		"nums1 = [1, 3] nums2 = [2], should result in 2.0":   findMedianSortedArrays([]int{1, 3}, []int{2}),
+		"nums1 = [1, 2] nums2 = [3, 4] should result in 2.5": findMedianSortedArrays([]int{1, 2}, []int{3, 4}),
 	}).Println()
 }
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-	totalLength := len(nums1)+len(nums2)
-	return findMedianSortedArraysHelper(nums1, nums2, (totalLength-1)/2, (totalLength&1)==0)
+	totalLength := len(nums1) + len(nums2)
+	return findMedianSortedArraysHelper(nums1, nums2, (totalLength-1)/2, (totalLength&1) == 0)
 }
 
 func findMedianSortedArraysHelper(nums1 []int, nums2 []int, medianIndex int, needNext bool) float64 {
@@ -72,8 +72,8 @@ func findMedianSortedArraysHelper(nums1 []int, nums2 []int, medianIndex int, nee
 	}
 
 	// cut the less one from 0 to halfIndex(include), cut anyone if nums1[halfIndex] == nums2[halfIndex]
-	halfIndex := (medianIndex-1)/2
-	if len(nums1) < halfIndex + 1 {
+	halfIndex := (medianIndex - 1) / 2
+	if len(nums1) < halfIndex+1 {
 		if nums1[len(nums1)-1] <= nums2[halfIndex] {
 			medianIndex -= len(nums1)
 			medianValue := float64(nums2[medianIndex])
@@ -85,7 +85,7 @@ func findMedianSortedArraysHelper(nums1 []int, nums2 []int, medianIndex int, nee
 		} else {
 			return findMedianSortedArraysHelper(nums1, nums2[halfIndex+1:], medianIndex-halfIndex-1, needNext)
 		}
-	} else if len(nums2) < halfIndex + 1 {
+	} else if len(nums2) < halfIndex+1 {
 		if nums2[len(nums2)-1] <= nums1[halfIndex] {
 			medianIndex -= len(nums2)
 			medianValue := float64(nums1[medianIndex])

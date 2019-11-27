@@ -10,9 +10,9 @@ func twoSum(numbers []int, target int) []int {
 	for i, num := range numbers {
 		val, exists := table[num]
 		if !exists {
-			table[target - num] = i
+			table[target-num] = i
 		} else {
-			return []int{val+1, i+1}
+			return []int{val + 1, i + 1}
 		}
 	}
 

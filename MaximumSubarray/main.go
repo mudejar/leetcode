@@ -6,7 +6,7 @@ import (
 
 func main() {
 	log.WithFields(log.Fields{
-		"[-2,1,-3,4,-1,2,1,-5,4]": maxSubArray([]int{-2,1,-3,4,-1,2,1,-5,4}),
+		"[-2,1,-3,4,-1,2,1,-5,4]": maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}),
 	}).Println()
 }
 

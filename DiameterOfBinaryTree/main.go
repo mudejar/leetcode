@@ -5,8 +5,8 @@ func main() {
 }
 
 type TreeNode struct {
-	Val int
-	Left *TreeNode
+	Val   int
+	Left  *TreeNode
 	Right *TreeNode
 }
 
@@ -23,7 +23,6 @@ func diameterOfBinaryTree(root *TreeNode) int {
 	return ans - 1
 }
 
-
 func depth(t *TreeNode) int {
 	if t == nil {
 		return 0
@@ -32,7 +31,7 @@ func depth(t *TreeNode) int {
 	L := depth(t.Left)
 	R := depth(t.Right)
 	ans = max(ans, L+R+1)
-	return max(L,R) + 1
+	return max(L, R) + 1
 }
 
 func max(x, y int) int {

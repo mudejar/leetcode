@@ -1,15 +1,15 @@
 package main
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
 
 func main() {}
 
 type TreeNode struct {
-	Val int
-	Left *TreeNode
+	Val   int
+	Left  *TreeNode
 	Right *TreeNode
 }
 
@@ -31,7 +31,7 @@ func isSubtree(s *TreeNode, t *TreeNode) bool {
 }
 
 func traverse(s *TreeNode, t *TreeNode) bool {
-	return s != nil && (equals(s,t) || traverse(s.Left, t) || traverse(s.Right, t))
+	return s != nil && (equals(s, t) || traverse(s.Left, t) || traverse(s.Right, t))
 }
 
 func equals(x *TreeNode, y *TreeNode) bool {

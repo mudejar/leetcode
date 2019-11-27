@@ -1,16 +1,16 @@
 package main
 
-import(
+import (
 	log "github.com/sirupsen/logrus"
 	"math"
 )
 
 func main() {
 	log.WithFields(log.Fields{
-		"4": mySqrt(4),
-		"8": mySqrt(8),
-		"9": mySqrt(9),
-		"2": mySqrt(2),
+		"4":          mySqrt(4),
+		"8":          mySqrt(8),
+		"9":          mySqrt(9),
+		"2":          mySqrt(2),
 		"2147395610": mySqrt(2147395610),
 	}).Println()
 }

@@ -6,9 +6,9 @@ import (
 
 func main() {
 	log.WithFields(log.Fields{
-		`haystack = "hello", needle = "ll"`: strStr("hello", "ll"),
-		`"aaaaa", needle = "bba"`: strStr("aaaaa", "bba"),
-		`"AABAACAADAABAABA" needle="AABA"`: strStr("AABAACAADAABAABA", "AABA"),
+		`haystack = "hello", needle = "ll"`:    strStr("hello", "ll"),
+		`"aaaaa", needle = "bba"`:              strStr("aaaaa", "bba"),
+		`"AABAACAADAABAABA" needle="AABA"`:     strStr("AABAACAADAABAABA", "AABA"),
 		`haystack="ABXABABXAB" needle="ABXAB"`: strStr("ABXABABXAB", "ABXAB"),
 	}).Println()
 }
@@ -30,15 +30,16 @@ func KMPSearch(needle, haystack string) int {
 	// values for pattern
 	lpsArr := getLPS(needle)
 
-	j:=0; i:=0
+	j := 0
+	i := 0
 	for i < haystackLength {
-		if (needle[j] == haystack[i]) {
+		if needle[j] == haystack[i] {
 			j++
 			i++
 		}
 
 		if j == needleLength {
-			return i-j
+			return i - j
 		} else if i < haystackLength && needle[j] != haystack[i] {
 			// Do not match lps[0..lps[j-1]] characters,
 			// they will match anyway

@@ -55,7 +55,7 @@ func addBinary(a string, b string) string {
 	y, _ := strconv.ParseInt(b, 2, 64)
 
 	for y != 0 {
-		answer := x^y
+		answer := x ^ y
 		carry := (x & y) << 1
 		x = answer
 		y = carry

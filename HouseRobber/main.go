@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	rob([]int{2,1,1,2})
+	rob([]int{2, 1, 1, 2})
 }
 
 func rob(nums []int) int {
@@ -10,7 +10,7 @@ func rob(nums []int) int {
 
 	for _, num := range nums {
 		temp := currMax
-		currMax = max(prevMax + num, currMax)
+		currMax = max(prevMax+num, currMax)
 		prevMax = temp
 	}
 

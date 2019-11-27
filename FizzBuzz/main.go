@@ -34,7 +34,7 @@ func fizzBuzz(n int) []string {
 	for i := 1; i <= n; i++ {
 		numAndStr := ""
 		for _, key := range []int{3, 5} {
-			if i % key == 0 {
+			if i%key == 0 {
 				numAndStr += fizzBuzzDict[key]
 			}
 		}

@@ -6,9 +6,9 @@ import (
 
 func main() {
 	log.WithFields(log.Fields{
-	"3 2 2 3": removeElement([]int{3,2,2,3}, 3),
-	"0 1 2 2 3 0 4 2": removeElement([]int{0,1,2,2,3,0,4,2}, 2),
-	"1": removeElement([]int{1}, 1),
+		"3 2 2 3":         removeElement([]int{3, 2, 2, 3}, 3),
+		"0 1 2 2 3 0 4 2": removeElement([]int{0, 1, 2, 2, 3, 0, 4, 2}, 2),
+		"1":               removeElement([]int{1}, 1),
 	}).Println()
 }
 

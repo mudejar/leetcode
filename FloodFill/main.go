@@ -5,8 +5,8 @@ func main() {
 }
 
 var (
-	R int
-	C int
+	R     int
+	C     int
 	color int
 )
 
@@ -33,7 +33,7 @@ func dfs(image [][]int, newColor int, r int, c int) {
 		if c >= 1 {
 			dfs(image, newColor, r, c-1)
 		}
-		if c + 1 < C {
+		if c+1 < C {
 			dfs(image, newColor, r, c+1)
 		}
 	}

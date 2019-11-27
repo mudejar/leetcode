@@ -1,11 +1,11 @@
 package main
 
-import(
+import (
 	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-	log.WithField("Answer", intersect([]int{4,7,9,7,6,7}, []int{5,0,0,6,1,6,2,2,4})).Println()
+	log.WithField("Answer", intersect([]int{4, 7, 9, 7, 6, 7}, []int{5, 0, 0, 6, 1, 6, 2, 2, 4})).Println()
 }
 
 func intersect(nums1 []int, nums2 []int) []int {
@@ -23,7 +23,7 @@ func intersect(nums1 []int, nums2 []int) []int {
 	}).Println() // debug
 
 	end := 0
-	for k := 0; k < len(nums2); k++{
+	for k := 0; k < len(nums2); k++ {
 		val := m[nums2[k]]
 		if val > 0 {
 			nums1[end] = nums2[k]

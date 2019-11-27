@@ -27,14 +27,13 @@ func reorderLogFiles(logs []string) []string {
 		}
 	}
 
-
 	sort.Slice(letterLogs, func(i int, j int) bool { // This will perform a switch operation with a custom less function passed in
 		ii := strings.Index(letterLogs[i], " ") // the index of the first instance of a space character
 		ji := strings.Index(letterLogs[j], " ") // the index of the first instance of a space character
 
 		iLog := letterLogs[i][ii+1:] // all letter logs at i with the exception of the identifier
 		jLog := letterLogs[j][ji+1:] // all letter logs at j with the exception of the identifier
-		if iLog == jLog { // This compares identifiers in the case of ties
+		if iLog == jLog {            // This compares identifiers in the case of ties
 			// This would be for a situation like the following:
 			// letterLogs[i] = "let1 art can"
 			// letterLogs[j] = "let3 art can"

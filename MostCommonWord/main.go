@@ -1,9 +1,9 @@
 package main
 
-import(
+import (
+	log "github.com/sirupsen/logrus"
 	"regexp"
 	"strings"
-	log "github.com/sirupsen/logrus"
 )
 
 func main() {
@@ -34,7 +34,6 @@ func mostCommonWord(paragraph string, banned []string) string {
 
 	return mostCommonWord
 }
-
 
 func getWords(paragraph string) []string {
 	reg, _ := regexp.Compile("[^a-zA-Z0-9]+")

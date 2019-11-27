@@ -23,7 +23,7 @@ func subdomainVisits(cpdomains []string) []string {
 	}
 
 	for domain, count := range domainCounts {
-		ans = append(ans,fmt.Sprintf("%d %s", count, domain))
+		ans = append(ans, fmt.Sprintf("%d %s", count, domain))
 	}
 
 	return ans

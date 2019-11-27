@@ -5,7 +5,7 @@ func main() {
 }
 
 func moveZeroes(nums []int) {
-	length := len(nums) -1
+	length := len(nums) - 1
 	zerosCount, nPos := 0, 0
 
 	for _, n := range nums {

@@ -45,36 +45,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-//func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-//	if l1 == nil && l2 == nil {
-//		return nil
-//	}
-//	if l2 == nil {
-//		return &ListNode{
-//			Val:  l1.Val,
-//			Next: mergeTwoLists(l1.Next, nil),
-//		}
-//	}
-//	if l1 == nil {
-//		return &ListNode{
-//			Val:  l2.Val,
-//			Next: mergeTwoLists(nil, l2.Next),
-//		}
-//	}
-//
-//	if l1.Val < l2.Val {
-//		return &ListNode{
-//			Val:  l1.Val,
-//			Next: mergeTwoLists(l1.Next, l2),
-//		}
-//	} else {
-//		return &ListNode{
-//			Val:  l2.Val,
-//			Next: mergeTwoLists(l1, l2.Next),
-//		}
-//	}
-//}
-
 // This is the faster solution
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1 == nil && l2 == nil {

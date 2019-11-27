@@ -10,8 +10,8 @@ func numMagicSquaresInside(grid [][]int) int {
 	row := len(grid)
 	col := len(grid[0])
 
-	for i := 1; i < row - 1; i++ {
-		for j := 1; j < col - 1; j++ {
+	for i := 1; i < row-1; i++ {
+		for j := 1; j < col-1; j++ {
 			A, B, C := grid[i-1][j-1], grid[i-1][j], grid[i-1][j+1]
 			D, E, F := grid[i][j-1], grid[i][j], grid[i][j+1]
 			G, H, I := grid[i+1][j-1], grid[i+1][j], grid[i+1][j+1]
