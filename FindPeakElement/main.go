@@ -14,7 +14,7 @@ func findPeakElement(nums []int) int {
 	}
 
 	if nums[len(nums)-1] > nums[len(nums)-2] {
-		return len(nums)-1
+		return len(nums) - 1
 	}
 
 	left, right := 1, len(nums)-2
