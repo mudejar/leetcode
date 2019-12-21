@@ -8,7 +8,7 @@ func main() {
 
 }
 
-const(
+const (
 	max = 2147483647
 )
 
@@ -25,15 +25,17 @@ func search(reader ArrayReader, target int) int {
 	}
 
 	length := 10000
-	for ;; length-- {
-		if reader.get(length) == max {break}
+	for ; ; length-- {
+		if reader.get(length) == max {
+			break
+		}
 	}
 
 	return binarySearch(reader, target, 0, length)
 }
 
 func binarySearch(reader ArrayReader, target, left, right int) int {
-	if right - left <= 1 {
+	if right-left <= 1 {
 		if reader.get(left) == target {
 			return left
 		}

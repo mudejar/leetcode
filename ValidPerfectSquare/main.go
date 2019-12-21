@@ -27,8 +27,8 @@ func search(target, left, right int) bool {
 		return false
 	}
 
-	midpoint := (left+right)/2
-	square := midpoint*midpoint
+	midpoint := (left + right) / 2
+	square := midpoint * midpoint
 	if square == target {
 		return true
 	}
