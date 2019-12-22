@@ -19,6 +19,7 @@ func main() {
 //	return nil
 //}
 
+// This is the faster alternative solution space = O(1) and time = O(n)
 func twoSum(numbers []int, target int) []int {
 
 	left := 0
