@@ -27,6 +27,30 @@ func findMin(nums []int) int {
 	return binarySearch(nums, 0, len(nums)-1)
 }
 
+//func binarySearch(nums []int, left int, right int) int {
+//	if right == left {
+//		if right == len(nums)-1 && nums[right] > nums[0] {
+//			return nums[0]
+//		}
+//		return nums[left]
+//	}
+//
+//	midpoint := (left + right) / 2
+//	if nums[midpoint] > nums[midpoint+1] {
+//		return nums[midpoint+1]
+//	}
+//
+//	if nums[midpoint] < nums[midpoint-1] {
+//		return nums[midpoint]
+//	}
+//
+//	if nums[midpoint] < nums[0] {
+//		return binarySearch(nums, left, midpoint-1)
+//	}
+//
+//	return binarySearch(nums, midpoint+1, right)
+//}
+
 func binarySearch(nums []int, left int, right int) int {
 	if right == left {
 		if right == len(nums)-1 && nums[right] > nums[0] {
