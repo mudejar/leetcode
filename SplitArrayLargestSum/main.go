@@ -7,7 +7,8 @@ func main() {
 func splitArray(nums []int, m int) int {
 	// Find the highest single value in the array as well as sum total
 	// Set left pointer to the single value, set right pointer to sum total
-	left := 0; right := 0
+	left := 0
+	right := 0
 	n := len(nums)
 	for i := 0; i < n; i++ {
 		right += nums[i]
@@ -29,7 +30,7 @@ func splitArray(nums []int, m int) int {
 		// and increment the count value. The count value counts how many subarrays
 		// are currently being accounted for.
 		for i := 0; i < n; i++ {
-			if sum + nums[i] > midpoint {
+			if sum+nums[i] > midpoint {
 				count++
 				sum = nums[i]
 			} else {
@@ -47,7 +48,7 @@ func splitArray(nums []int, m int) int {
 	return answer
 }
 
-func min(x,y int) int {
+func min(x, y int) int {
 	if x < y {
 		return x
 	}
