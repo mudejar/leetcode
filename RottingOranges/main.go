@@ -126,16 +126,6 @@ func orangesRotting(grid [][]int) int {
 	rowLen := len(grid)
 	colLen := len(grid[0])
 
-	if rowLen == 1 && colLen == 1 {
-		if grid[0][0] == 0 {
-			return 0
-		}
-
-		if grid[0][0] == 1 {
-			return -1
-		}
-	}
-
 	// first find every rotten orange and use each as a head node for a search
 	// tree
 	allRottenOranges := []*SearchTree{}
